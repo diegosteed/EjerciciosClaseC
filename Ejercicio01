@@ -1,0 +1,19 @@
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    ofstream salida;
+    salida.open("datos.txt");
+
+    string nombre = "Luis";
+    int edad = 25;
+    string ciudad = "Quito";
+
+    salida << nombre << "\n";
+    salida << edad << "\n";
+    salida << ciudad << "\n";
+
+    salida.close();
+    return 0;
+}
