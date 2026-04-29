@@ -1,0 +1,35 @@
+Qué falta:
+Te faltó incluir la librería de string, y además solo estás leyendo nombre y edad cuando en realidad también hay ciudad en el archivo. También la salida se ve pegada y no estás cerrando el archivo.
+
+Qué se debe validar:
+Hay que asegurarse de que el archivo sí se abra bien, porque si no el programa falla. También que los datos se estén leyendo completos (nombre, edad y ciudad) y no incompletos.
+
+Mejora del código:
+Leer los tres datos correctamente, mostrar la información de forma más clara (con espacios o etiquetas), y verificar el archivo antes de usarlo para evitar errores.
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    ifstream archivo("datos.txt");
+
+    if (!archivo) {
+        cout << "No se pudo abrir el archivo" << endl;
+        return 1;
+    }
+
+    string nombre, ciudad;
+    int edad;
+
+    while (archivo >> nombre >> edad >> ciudad) {
+        cout << "Nombre: " << nombre << endl;
+        cout << "Edad: " << edad << endl;
+        cout << "Ciudad: " << ciudad << endl;
+        cout << "---" << endl;
+    }
+
+    archivo.close();
+    return 0;
+}
