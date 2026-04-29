@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float e1 = (8 + 7 + 9) / 3.0;
+    float e2 = (5 + 6 + 4) / 3.0;
+    float e3 = (10 + 9 + 10) / 3.0;
+
+    int aprobados = 0;
+
+    cout << "Promedio Estudiante 1: " << e1 << endl;
+    if (e1 >= 7) {
+        cout << "Aprueba" << endl;
+        aprobados++;
+    } else {
+        cout << "Reprueba" << endl;
+    }
+
+    cout << endl;
+
+    cout << "Promedio Estudiante 2: " << e2 << endl;
+    if (e2 >= 7) {
+        cout << "Aprueba" << endl;
+        aprobados++;
+    } else {
+        cout << "Reprueba" << endl;
+    }
+
+    cout << endl;
+
+    cout << "Promedio Estudiante 3: " << e3 << endl;
+    if (e3 >= 7) {
+        cout << "Aprueba" << endl;
+        aprobados++;
+    } else {
+        cout << "Reprueba" << endl;
+    }
+
+    cout << endl;
+    cout << "Total que aprueban: " << aprobados;
+
+    return 0;
+}
